@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Movie Gifs: Find gifs from your favorite movie</title>
+		<link href="/static/packages/materialize/dist/css/materialize.css" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script src="static/packages/jquery/dist/jquery.js"></script>
+	</head>
+	<body ng-app="app">
+		<header>
+			<nav>
+				<div class="nav-wrapper">
+					<a href="#" class="brand-logo">Movie Gifs!</a>
+					<ul class="hide-on-med-and-down right" id="navMobile">
+						<li><a href="#">About</a></li>
+						<li><a href="#">More Projects</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<main class="container" ng-view>
+			
+		</main>
+		<footer>
+
+		</footer>
+		<script src="/static/packages/angularjs/angular.js"></script>
+		<script src="/static/packages/angular-route/angular-route.min.js"></script>
+		<script src="/static/js/app.js"></script>
+		<script src="/static/js/services.js"></script>
+	</body>
+</html>
