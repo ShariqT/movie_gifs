@@ -17,8 +17,8 @@ var app = (function(){
 		}
 		$scope.gifs = null;
 		var onSuccess = function(data){
-			console.log(data.data.gifs);
-			$scope.gifs = data.data.gifs;
+			if(data.data.gifs) $scope.gifs = data.data.gifs;
+			if(data.data.movies) $scope.movies = data.data.movies;
 		};
 
 		var onError = function(reason){
@@ -30,6 +30,7 @@ var app = (function(){
 			console.log("starting the search");
 			console.log(appTumblrService);
 			appTumblrService.searchTags($scope.term).then(onSuccess, onError);
+			appRottenTomatoService.queryMovie($scope.term).then(onSuccess, onError);
 		}
 
 	};

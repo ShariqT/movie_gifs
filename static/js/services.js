@@ -22,7 +22,7 @@
 		var t = {};
 
 		t.queryMovie = function(term){
-			return $http.get(rottenTomatoAPI + "/get_movie", {params: {}}).then(function(data){
+			return $http.get(rottenTomatoAPI + "/movie", {params: {"q": term}}).then(function(data){
 				return data;
 			});
 		}
